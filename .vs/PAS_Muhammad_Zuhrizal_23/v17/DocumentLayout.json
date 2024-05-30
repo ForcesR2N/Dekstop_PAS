@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|c:\\users\\asusr\\source\\repos\\pas_muhammad_zuhrizal_23\\pas_muhammad_zuhrizal_23\\buy_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|solutionrelative:pas_muhammad_zuhrizal_23\\buy_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\pas_muhammad_zuhrizal_23\\profile_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|solutionrelative:pas_muhammad_zuhrizal_23\\profile_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\pas_muhammad_zuhrizal_23\\profile_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|solutionrelative:pas_muhammad_zuhrizal_23\\profile_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\pas_muhammad_zuhrizal_23\\myorder_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|solutionrelative:pas_muhammad_zuhrizal_23\\myorder_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\pas_muhammad_zuhrizal_23\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|solutionrelative:pas_muhammad_zuhrizal_23\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\pas_muhammad_zuhrizal_23\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B853B7A2-A1BE-4939-813B-F660C48D0E19}|PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23.csproj|solutionrelative:pas_muhammad_zuhrizal_23\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Form1.cs",
+              "RelativeDocumentMoniker": "PAS_Muhammad_Zuhrizal_23\\Form1.cs",
+              "ToolTip": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Form1.cs",
+              "RelativeToolTip": "PAS_Muhammad_Zuhrizal_23\\Form1.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAawA0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T14:50:04.771Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Buy_Page.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Buy_Page.cs",
+              "RelativeDocumentMoniker": "PAS_Muhammad_Zuhrizal_23\\Buy_Page.cs",
+              "ToolTip": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Buy_Page.cs [Design]*",
+              "RelativeToolTip": "PAS_Muhammad_Zuhrizal_23\\Buy_Page.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T06:25:11.307Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Profile_Page.cs",
+              "DocumentMoniker": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Profile_Page.cs",
+              "RelativeDocumentMoniker": "PAS_Muhammad_Zuhrizal_23\\Profile_Page.cs",
+              "ToolTip": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Profile_Page.cs",
+              "RelativeToolTip": "PAS_Muhammad_Zuhrizal_23\\Profile_Page.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAhwEEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T16:40:08.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Profile_Page.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Profile_Page.cs",
+              "RelativeDocumentMoniker": "PAS_Muhammad_Zuhrizal_23\\Profile_Page.cs",
+              "ToolTip": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Profile_Page.cs [Design]",
+              "RelativeToolTip": "PAS_Muhammad_Zuhrizal_23\\Profile_Page.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T17:19:20.312Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyOrder_Page.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\MyOrder_Page.cs",
+              "RelativeDocumentMoniker": "PAS_Muhammad_Zuhrizal_23\\MyOrder_Page.cs",
+              "ToolTip": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\MyOrder_Page.cs [Design]*",
+              "RelativeToolTip": "PAS_Muhammad_Zuhrizal_23\\MyOrder_Page.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T16:00:06.368Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Form1.cs",
+              "RelativeDocumentMoniker": "PAS_Muhammad_Zuhrizal_23\\Form1.cs",
+              "ToolTip": "C:\\Users\\asusr\\source\\repos\\PAS_Muhammad_Zuhrizal_23\\PAS_Muhammad_Zuhrizal_23\\Form1.cs [Design]",
+              "RelativeToolTip": "PAS_Muhammad_Zuhrizal_23\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T14:41:43.279Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
