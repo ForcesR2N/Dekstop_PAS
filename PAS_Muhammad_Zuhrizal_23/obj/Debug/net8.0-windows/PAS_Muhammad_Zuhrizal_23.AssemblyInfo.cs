@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PAS_Muhammad_Zuhrizal_23")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3338ed163e5fa29186c070ef9f666b493fc8a962")]
 [assembly: System.Reflection.AssemblyProductAttribute("PAS_Muhammad_Zuhrizal_23")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PAS_Muhammad_Zuhrizal_23")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

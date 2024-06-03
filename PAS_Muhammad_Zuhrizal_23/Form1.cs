@@ -2,10 +2,15 @@ using Microsoft.Data.SqlClient;
 using System.Data.SqlClient;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Drawing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 namespace PAS_Muhammad_Zuhrizal_23
 {
     public partial class Form1 : Form
     {
+        private string Username;
+        private string Password;
+
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +33,10 @@ namespace PAS_Muhammad_Zuhrizal_23
             if (count > 0 )
             {
                 MessageBox.Show("Login Succesfully!", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Profile_Page profilePage = new Profile_Page(txtUsername.Text, txtPassword.Text);
+                UserInfo.Username = txtUsername.Text;
+                UserInfo.Password = txtPassword.Text;
+
+                Profile_Page profilePage = new Profile_Page(UserInfo.Username, UserInfo.Password);
                 profilePage.Show();
                 this.Hide();
             }

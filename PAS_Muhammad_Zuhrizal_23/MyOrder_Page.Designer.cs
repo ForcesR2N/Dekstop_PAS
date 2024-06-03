@@ -39,8 +39,8 @@
             btnRead = new Button();
             btnCreate = new Button();
             panel1 = new Panel();
+            btnOrder = new Button();
             btnBack = new Button();
-            button1 = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -48,9 +48,13 @@
             label6 = new Label();
             label7 = new Label();
             textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
+            cmbBook = new ComboBox();
             numericUpDown1 = new NumericUpDown();
-            button2 = new Button();
+            btnClear = new Button();
+            rdBeli = new RadioButton();
+            rdPinjam = new RadioButton();
+            label8 = new Label();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -69,7 +73,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(639, 202);
+            btnSearch.Location = new Point(639, 238);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 1;
@@ -79,10 +83,10 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(301, 232);
+            dataGridView1.Location = new Point(301, 270);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(433, 215);
+            dataGridView1.Size = new Size(433, 177);
             dataGridView1.TabIndex = 3;
             // 
             // panel2
@@ -96,7 +100,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(301, 203);
+            textBox2.Location = new Point(301, 239);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(332, 27);
             textBox2.TabIndex = 25;
@@ -115,7 +119,7 @@
             // btnDelete
             // 
             btnDelete.Cursor = Cursors.Hand;
-            btnDelete.Location = new Point(195, 363);
+            btnDelete.Location = new Point(195, 373);
             btnDelete.Margin = new Padding(5, 4, 5, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(98, 29);
@@ -126,7 +130,7 @@
             // btnUpdate
             // 
             btnUpdate.Cursor = Cursors.Hand;
-            btnUpdate.Location = new Point(195, 319);
+            btnUpdate.Location = new Point(195, 338);
             btnUpdate.Margin = new Padding(5, 4, 5, 4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(98, 29);
@@ -137,7 +141,7 @@
             // btnRead
             // 
             btnRead.Cursor = Cursors.Hand;
-            btnRead.Location = new Point(195, 276);
+            btnRead.Location = new Point(195, 303);
             btnRead.Margin = new Padding(5, 4, 5, 4);
             btnRead.Name = "btnRead";
             btnRead.Size = new Size(98, 29);
@@ -148,23 +152,34 @@
             // btnCreate
             // 
             btnCreate.Cursor = Cursors.Hand;
-            btnCreate.Location = new Point(195, 232);
+            btnCreate.Location = new Point(195, 270);
             btnCreate.Margin = new Padding(5, 4, 5, 4);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(98, 29);
             btnCreate.TabIndex = 26;
             btnCreate.Text = "Create";
             btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Info;
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnOrder);
             panel1.Controls.Add(btnBack);
             panel1.Location = new Point(1, 56);
             panel1.Name = "panel1";
             panel1.Size = new Size(106, 399);
             panel1.TabIndex = 31;
+            // 
+            // btnOrder
+            // 
+            btnOrder.Location = new Point(13, 199);
+            btnOrder.Name = "btnOrder";
+            btnOrder.Size = new Size(83, 29);
+            btnOrder.TabIndex = 24;
+            btnOrder.Text = "Order";
+            btnOrder.UseVisualStyleBackColor = true;
+            btnOrder.Click += button1_Click_1;
             // 
             // btnBack
             // 
@@ -174,15 +189,7 @@
             btnBack.TabIndex = 21;
             btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(13, 199);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 29);
-            button1.TabIndex = 24;
-            button1.Text = "Order";
-            button1.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
             // 
             // label2
             // 
@@ -242,16 +249,17 @@
             // 
             textBox1.Location = new Point(212, 82);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
+            textBox1.Size = new Size(251, 27);
             textBox1.TabIndex = 4;
             // 
-            // comboBox1
+            // cmbBook
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(212, 115);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(125, 28);
-            comboBox1.TabIndex = 32;
+            cmbBook.FormattingEnabled = true;
+            cmbBook.Items.AddRange(new object[] { "Atomic Habits", "The Psychology Of Money", "Subtle Art Of Not Giving A Fuck", "Good Vibes, Good Life", "How To Respect Myself", "Learning How To Learn" });
+            cmbBook.Location = new Point(212, 115);
+            cmbBook.Name = "cmbBook";
+            cmbBook.Size = new Size(251, 28);
+            cmbBook.TabIndex = 32;
             // 
             // numericUpDown1
             // 
@@ -262,21 +270,65 @@
             numericUpDown1.TabIndex = 40;
             numericUpDown1.TextAlign = HorizontalAlignment.Center;
             // 
-            // button2
+            // btnClear
             // 
-            button2.Location = new Point(348, 152);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 41;
-            button2.Text = "Clear";
-            button2.UseVisualStyleBackColor = true;
+            btnClear.Location = new Point(694, 167);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(94, 29);
+            btnClear.TabIndex = 41;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            // 
+            // rdBeli
+            // 
+            rdBeli.AutoSize = true;
+            rdBeli.Location = new Point(639, 115);
+            rdBeli.Name = "rdBeli";
+            rdBeli.Size = new Size(58, 24);
+            rdBeli.TabIndex = 45;
+            rdBeli.TabStop = true;
+            rdBeli.Text = "BELI";
+            rdBeli.UseVisualStyleBackColor = true;
+            // 
+            // rdPinjam
+            // 
+            rdPinjam.AutoSize = true;
+            rdPinjam.Location = new Point(639, 85);
+            rdPinjam.Name = "rdPinjam";
+            rdPinjam.Size = new Size(81, 24);
+            rdPinjam.TabIndex = 44;
+            rdPinjam.TabStop = true;
+            rdPinjam.Text = "PINJAM";
+            rdPinjam.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(606, 85);
+            label8.Name = "label8";
+            label8.Size = new Size(12, 20);
+            label8.TabIndex = 43;
+            label8.Text = ":";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(535, 85);
+            label9.Name = "label9";
+            label9.Size = new Size(37, 20);
+            label9.TabIndex = 42;
+            label9.Text = "TIPE";
             // 
             // MyOrder_Page
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(rdBeli);
+            Controls.Add(rdPinjam);
+            Controls.Add(label8);
+            Controls.Add(label9);
+            Controls.Add(btnClear);
             Controls.Add(numericUpDown1);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -284,7 +336,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbBook);
             Controls.Add(panel1);
             Controls.Add(btnPrintPDF);
             Controls.Add(btnDelete);
@@ -321,7 +373,7 @@
         private Button btnRead;
         private Button btnCreate;
         private Panel panel1;
-        private Button button1;
+        private Button btnOrder;
         private Button btnBack;
         private Label label2;
         private Label label3;
@@ -330,8 +382,12 @@
         private Label label6;
         private Label label7;
         private TextBox textBox1;
-        private ComboBox comboBox1;
+        private ComboBox cmbBook;
         private NumericUpDown numericUpDown1;
-        private Button button2;
+        private Button btnClear;
+        private RadioButton rdBeli;
+        private RadioButton rdPinjam;
+        private Label label8;
+        private Label label9;
     }
 }

@@ -42,9 +42,9 @@
             panel2 = new Panel();
             label9 = new Label();
             panel1 = new Panel();
-            button2 = new Button();
-            btnBack = new Button();
             button3 = new Button();
+            btnBack = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -54,7 +54,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(307, 121);
+            label1.Location = new Point(333, 121);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new Size(137, 25);
@@ -64,7 +64,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(311, 167);
+            label2.Location = new Point(337, 167);
             label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
             label2.Size = new Size(136, 25);
@@ -189,15 +189,16 @@
             panel1.Size = new Size(87, 396);
             panel1.TabIndex = 25;
             // 
-            // button2
+            // button3
             // 
-            button2.Font = new Font("Verdana", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(3, 197);
-            button2.Name = "button2";
-            button2.Size = new Size(74, 35);
-            button2.TabIndex = 26;
-            button2.Text = "Order";
-            button2.UseVisualStyleBackColor = true;
+            button3.Font = new Font("Verdana", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.Location = new Point(0, 238);
+            button3.Name = "button3";
+            button3.Size = new Size(84, 29);
+            button3.TabIndex = 26;
+            button3.Text = "My Order";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // btnBack
             // 
@@ -209,15 +210,16 @@
             btnBack.Text = "BACK";
             btnBack.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button2
             // 
-            button3.Font = new Font("Verdana", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(0, 238);
-            button3.Name = "button3";
-            button3.Size = new Size(84, 29);
-            button3.TabIndex = 26;
-            button3.Text = "My Order";
-            button3.UseVisualStyleBackColor = true;
+            button2.Font = new Font("Verdana", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(3, 197);
+            button2.Name = "button2";
+            button2.Size = new Size(74, 35);
+            button2.TabIndex = 26;
+            button2.Text = "Order";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // Profile_Page
             // 
