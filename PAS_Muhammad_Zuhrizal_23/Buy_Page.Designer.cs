@@ -179,6 +179,7 @@
             txtCheckPrice.Name = "txtCheckPrice";
             txtCheckPrice.Size = new Size(125, 27);
             txtCheckPrice.TabIndex = 17;
+            txtCheckPrice.TextChanged += txtCheckPrice_TextChanged;
             // 
             // pictureBox1
             // 
@@ -206,6 +207,7 @@
             label10.Size = new Size(12, 20);
             label10.TabIndex = 20;
             label10.Text = ":";
+            label10.Click += label10_Click;
             // 
             // btnBack
             // 

@@ -112,7 +112,6 @@ namespace PAS_Muhammad_Zuhrizal_23
             {
                 txtCheckPrice.Text = $"FREE";
             }
-
         }
 
         private void rdPinjam_CheckedChanged(object sender, EventArgs e)
@@ -155,7 +154,7 @@ namespace PAS_Muhammad_Zuhrizal_23
                 conn.Open();
                 if (conn.State == ConnectionState.Open)
                 {
-                    string query = "INSERT INTO [dbo].[Table_Buy](nama, buku, jumlah, tipe, harga) VALUES (@nama, @buku, @jumlah, @tipe, @harga)";
+                    string query = "INSERT INTO data_penjualan(nama, buku, jumlah, tipe, harga) VALUES (@nama, @buku, @jumlah, @tipe, @harga)";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@nama", nama);
@@ -184,6 +183,16 @@ namespace PAS_Muhammad_Zuhrizal_23
         }
 
         private void cmbBook_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCheckPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
