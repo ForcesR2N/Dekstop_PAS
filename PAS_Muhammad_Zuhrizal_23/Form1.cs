@@ -22,6 +22,17 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                MessageBox.Show("Please enter username.", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Please enter password.", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             SqlConnection conn = new SqlConnection("Data Source = ASUS; Initial Catalog = PAS_Project; Integrated Security = True; Trust Server Certificate = True");
             conn.Open();
             string query = "SELECT COUNT(*) FROM DBO.login WHERE username=@username AND password=@password";
@@ -69,6 +80,21 @@ namespace PAS_Muhammad_Zuhrizal_23
                 pictureBox2.Show();
                 pictureBox3.Hide();
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure Want To Sign Up Page?", "Sign Up Page", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SignUp_Page signUp_Page = new SignUp_Page();
+                signUp_Page.Show();
+                this.Hide();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -39,6 +39,8 @@
             label4 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
+            label5 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -50,7 +52,7 @@
             txtUsername.Font = new Font("Verdana", 12F, FontStyle.Bold);
             txtUsername.Location = new Point(66, 320);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(378, 32);
+            txtUsername.Size = new Size(410, 32);
             txtUsername.TabIndex = 0;
             txtUsername.TextChanged += textBox1_TextChanged;
             // 
@@ -61,7 +63,7 @@
             txtPassword.Location = new Point(66, 426);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(378, 32);
+            txtPassword.Size = new Size(410, 32);
             txtPassword.TabIndex = 1;
             // 
             // label1
@@ -105,9 +107,9 @@
             btnLogin.Cursor = Cursors.Hand;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Verdana", 12F, FontStyle.Bold);
-            btnLogin.Location = new Point(210, 590);
+            btnLogin.Location = new Point(202, 592);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(97, 32);
+            btnLogin.Size = new Size(134, 57);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
@@ -138,7 +140,7 @@
             // 
             pictureBox2.BackColor = Color.WhiteSmoke;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(399, 430);
+            pictureBox2.Location = new Point(431, 430);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(37, 25);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -150,7 +152,7 @@
             // 
             pictureBox3.BackColor = Color.WhiteSmoke;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(399, 430);
+            pictureBox3.Location = new Point(431, 430);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(37, 25);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -159,11 +161,39 @@
             pictureBox3.Visible = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(124, 207, 244);
+            label5.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ControlText;
+            label5.Location = new Point(66, 471);
+            label5.Name = "label5";
+            label5.Size = new Size(184, 18);
+            label5.TabIndex = 10;
+            label5.Text = "Don't have an account?";
+            label5.Click += label5_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(124, 207, 244);
+            label6.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.DarkBlue;
+            label6.Location = new Point(247, 471);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 18);
+            label6.TabIndex = 11;
+            label6.Text = "Sign Up";
+            label6.Click += label6_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(542, 753);
+            Controls.Add(label6);
+            Controls.Add(label5);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(label4);
@@ -196,5 +226,7 @@
         private Label label4;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
+        private Label label5;
+        private Label label6;
     }
 }

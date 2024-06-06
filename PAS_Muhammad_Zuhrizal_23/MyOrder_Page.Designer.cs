@@ -29,19 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyOrder_Page));
-            label1 = new Label();
             btnSearch = new Button();
             dataGridView1 = new DataGridView();
-            panel2 = new Panel();
             txtSearch = new TextBox();
             btnPrintPDF = new Button();
             btnDelete = new Button();
             btnUpdate = new Button();
             btnRead = new Button();
             btnCreate = new Button();
-            panel1 = new Panel();
-            btnOrder = new Button();
-            btnBack = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -64,57 +59,43 @@
             txtId = new TextBox();
             printPreviewDialog1 = new PrintPreviewDialog();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            panel2 = new Panel();
+            label13 = new Label();
+            label1 = new Label();
+            label14 = new Label();
+            label15 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel2.SuspendLayout();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudQuantity).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(360, 18);
-            label1.Name = "label1";
-            label1.Size = new Size(102, 28);
-            label1.TabIndex = 0;
-            label1.Text = "My Order";
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(513, 235);
+            btnSearch.Location = new Point(576, 103);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
             btnSearch.TabIndex = 1;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click_1;
             // 
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(175, 267);
+            dataGridView1.Location = new Point(0, 137);
             dataGridView1.Margin = new Padding(5, 4, 5, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(613, 177);
+            dataGridView1.Size = new Size(683, 270);
             dataGridView1.TabIndex = 3;
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.Info;
-            panel2.Controls.Add(label1);
-            panel2.Location = new Point(1, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(803, 57);
-            panel2.TabIndex = 24;
-            // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(175, 236);
+            txtSearch.Location = new Point(238, 103);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(332, 27);
             txtSearch.TabIndex = 25;
@@ -122,7 +103,7 @@
             // btnPrintPDF
             // 
             btnPrintPDF.Cursor = Cursors.Hand;
-            btnPrintPDF.Location = new Point(108, 404);
+            btnPrintPDF.Location = new Point(325, 415);
             btnPrintPDF.Margin = new Padding(5, 4, 5, 4);
             btnPrintPDF.Name = "btnPrintPDF";
             btnPrintPDF.Size = new Size(67, 29);
@@ -134,7 +115,7 @@
             // btnDelete
             // 
             btnDelete.Cursor = Cursors.Hand;
-            btnDelete.Location = new Point(108, 370);
+            btnDelete.Location = new Point(248, 415);
             btnDelete.Margin = new Padding(5, 4, 5, 4);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(67, 29);
@@ -146,7 +127,7 @@
             // btnUpdate
             // 
             btnUpdate.Cursor = Cursors.Hand;
-            btnUpdate.Location = new Point(108, 335);
+            btnUpdate.Location = new Point(171, 415);
             btnUpdate.Margin = new Padding(5, 4, 5, 4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(67, 29);
@@ -158,7 +139,7 @@
             // btnRead
             // 
             btnRead.Cursor = Cursors.Hand;
-            btnRead.Location = new Point(108, 300);
+            btnRead.Location = new Point(94, 415);
             btnRead.Margin = new Padding(5, 4, 5, 4);
             btnRead.Name = "btnRead";
             btnRead.Size = new Size(67, 29);
@@ -170,7 +151,7 @@
             // btnCreate
             // 
             btnCreate.Cursor = Cursors.Hand;
-            btnCreate.Location = new Point(108, 267);
+            btnCreate.Location = new Point(15, 415);
             btnCreate.Margin = new Padding(5, 4, 5, 4);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(67, 29);
@@ -179,40 +160,10 @@
             btnCreate.UseVisualStyleBackColor = true;
             btnCreate.Click += btnCreate_Click;
             // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.Info;
-            panel1.Controls.Add(btnOrder);
-            panel1.Controls.Add(btnBack);
-            panel1.Location = new Point(1, 56);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(106, 399);
-            panel1.TabIndex = 31;
-            // 
-            // btnOrder
-            // 
-            btnOrder.Location = new Point(13, 199);
-            btnOrder.Name = "btnOrder";
-            btnOrder.Size = new Size(83, 29);
-            btnOrder.TabIndex = 24;
-            btnOrder.Text = "Order";
-            btnOrder.UseVisualStyleBackColor = true;
-            btnOrder.Click += btnOrder_Click;
-            // 
-            // btnBack
-            // 
-            btnBack.Location = new Point(13, 340);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(83, 29);
-            btnBack.TabIndex = 21;
-            btnBack.Text = "BACK";
-            btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(138, 116);
+            label2.Location = new Point(20, 529);
             label2.Name = "label2";
             label2.Size = new Size(49, 20);
             label2.TabIndex = 33;
@@ -221,7 +172,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(138, 153);
+            label3.Location = new Point(20, 566);
             label3.Name = "label3";
             label3.Size = new Size(41, 20);
             label3.TabIndex = 34;
@@ -230,7 +181,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(134, 187);
+            label4.Location = new Point(16, 600);
             label4.Name = "label4";
             label4.Size = new Size(55, 20);
             label4.TabIndex = 35;
@@ -239,7 +190,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(194, 117);
+            label5.Location = new Point(76, 530);
             label5.Name = "label5";
             label5.Size = new Size(12, 20);
             label5.TabIndex = 37;
@@ -248,7 +199,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(194, 185);
+            label6.Location = new Point(76, 598);
             label6.Name = "label6";
             label6.Size = new Size(12, 20);
             label6.TabIndex = 38;
@@ -257,7 +208,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(194, 151);
+            label7.Location = new Point(76, 564);
             label7.Name = "label7";
             label7.Size = new Size(12, 20);
             label7.TabIndex = 39;
@@ -265,7 +216,7 @@
             // 
             // txtNama
             // 
-            txtNama.Location = new Point(212, 117);
+            txtNama.Location = new Point(94, 530);
             txtNama.Name = "txtNama";
             txtNama.Size = new Size(251, 27);
             txtNama.TabIndex = 4;
@@ -274,7 +225,7 @@
             // 
             cmbBook.FormattingEnabled = true;
             cmbBook.Items.AddRange(new object[] { "Atomic Habits", "The Psychology Of Money", "Subtle Art Of Not Giving A Fuck", "Good Vibes, Good Life", "How To Respect Myself", "Learning How To Learn" });
-            cmbBook.Location = new Point(212, 150);
+            cmbBook.Location = new Point(94, 563);
             cmbBook.Name = "cmbBook";
             cmbBook.Size = new Size(251, 28);
             cmbBook.TabIndex = 32;
@@ -282,7 +233,7 @@
             // nudQuantity
             // 
             nudQuantity.BackColor = Color.White;
-            nudQuantity.Location = new Point(212, 184);
+            nudQuantity.Location = new Point(94, 597);
             nudQuantity.Name = "nudQuantity";
             nudQuantity.Size = new Size(64, 27);
             nudQuantity.TabIndex = 40;
@@ -290,7 +241,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(673, 193);
+            btnClear.Location = new Point(555, 606);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 29);
             btnClear.TabIndex = 41;
@@ -301,7 +252,7 @@
             // rdBeli
             // 
             rdBeli.AutoSize = true;
-            rdBeli.Location = new Point(639, 115);
+            rdBeli.Location = new Point(521, 528);
             rdBeli.Name = "rdBeli";
             rdBeli.Size = new Size(58, 24);
             rdBeli.TabIndex = 45;
@@ -312,7 +263,7 @@
             // rdPinjam
             // 
             rdPinjam.AutoSize = true;
-            rdPinjam.Location = new Point(639, 85);
+            rdPinjam.Location = new Point(521, 498);
             rdPinjam.Name = "rdPinjam";
             rdPinjam.Size = new Size(81, 24);
             rdPinjam.TabIndex = 44;
@@ -323,7 +274,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(606, 85);
+            label8.Location = new Point(488, 498);
             label8.Name = "label8";
             label8.Size = new Size(12, 20);
             label8.TabIndex = 43;
@@ -332,7 +283,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(535, 85);
+            label9.Location = new Point(417, 498);
             label9.Name = "label9";
             label9.Size = new Size(37, 20);
             label9.TabIndex = 42;
@@ -341,7 +292,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(607, 152);
+            label10.Location = new Point(489, 565);
             label10.Name = "label10";
             label10.Size = new Size(12, 20);
             label10.TabIndex = 48;
@@ -349,7 +300,7 @@
             // 
             // btnCekPrice
             // 
-            btnCekPrice.Location = new Point(499, 147);
+            btnCekPrice.Location = new Point(381, 560);
             btnCekPrice.Name = "btnCekPrice";
             btnCekPrice.Size = new Size(101, 29);
             btnCekPrice.TabIndex = 47;
@@ -359,7 +310,7 @@
             // 
             // txtCheckPrice
             // 
-            txtCheckPrice.Location = new Point(642, 147);
+            txtCheckPrice.Location = new Point(524, 560);
             txtCheckPrice.Name = "txtCheckPrice";
             txtCheckPrice.Size = new Size(125, 27);
             txtCheckPrice.TabIndex = 46;
@@ -367,7 +318,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(194, 84);
+            label11.Location = new Point(76, 497);
             label11.Name = "label11";
             label11.Size = new Size(12, 20);
             label11.TabIndex = 51;
@@ -376,7 +327,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(141, 84);
+            label12.Location = new Point(23, 485);
             label12.Name = "label12";
             label12.Size = new Size(22, 20);
             label12.TabIndex = 50;
@@ -384,7 +335,7 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(212, 84);
+            txtId.Location = new Point(94, 497);
             txtId.Name = "txtId";
             txtId.Size = new Size(251, 27);
             txtId.TabIndex = 49;
@@ -405,11 +356,71 @@
             // 
             printDocument1.PrintPage += printDocument1_PrintPage;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(37, 176, 239);
+            panel2.Controls.Add(label13);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(label14);
+            panel2.Controls.Add(label15);
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(682, 77);
+            panel2.TabIndex = 52;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Swis721 Hv BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.ForeColor = SystemColors.ButtonHighlight;
+            label13.Location = new Point(410, 27);
+            label13.Name = "label13";
+            label13.Size = new Size(69, 24);
+            label13.TabIndex = 29;
+            label13.Text = "SHOP";
+            label13.Click += label13_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Swis721 Hv BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(300, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 24);
+            label1.TabIndex = 26;
+            label1.Text = "HOME";
+            label1.Click += label1_Click;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Swis721 Hv BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.ForeColor = SystemColors.ButtonHighlight;
+            label14.Location = new Point(145, 27);
+            label14.Name = "label14";
+            label14.Size = new Size(121, 24);
+            label14.TabIndex = 25;
+            label14.Text = "MY ORDER";
+            label14.Click += label14_Click;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Location = new Point(13, 22);
+            label15.Name = "label15";
+            label15.Size = new Size(95, 31);
+            label15.TabIndex = 16;
+            label15.Text = "GraRizz";
+            // 
             // MyOrder_Page
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(124, 207, 244);
+            ClientSize = new Size(682, 753);
+            Controls.Add(panel2);
             Controls.Add(label11);
             Controls.Add(label12);
             Controls.Add(txtId);
@@ -429,14 +440,12 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(cmbBook);
-            Controls.Add(panel1);
             Controls.Add(btnPrintPDF);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(btnRead);
             Controls.Add(btnCreate);
             Controls.Add(txtSearch);
-            Controls.Add(panel2);
             Controls.Add(txtNama);
             Controls.Add(dataGridView1);
             Controls.Add(btnSearch);
@@ -445,29 +454,22 @@
             Text = "MyOrder_Page";
             Load += MyOrder_Page_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudQuantity).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)nudQuantity).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Button btnSearch;
         private DataGridView dataGridView1;
-        private Panel panel2;
         private TextBox txtSearch;
         private Button btnPrintPDF;
         private Button btnDelete;
         private Button btnUpdate;
         private Button btnRead;
         private Button btnCreate;
-        private Panel panel1;
-        private Button btnOrder;
-        private Button btnBack;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -490,5 +492,10 @@
         private TextBox txtId;
         private PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private Panel panel2;
+        private Label label13;
+        private Label label1;
+        private Label label14;
+        private Label label15;
     }
 }

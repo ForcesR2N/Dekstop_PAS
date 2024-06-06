@@ -27,7 +27,7 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private Dictionary<string, string> bookImages = new Dictionary<string, string>
 {
-    { "Atomic Habits", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\atomic_habits." },
+    { "Atomic Habits", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\atomic_habits.png" },
     { "The Psychology Of Money", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\The Psychology Of Money.jpg" },
     { "Subtle Art Of Not Giving A Fuck", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\Subtle Art Of Not Giving A Fuck.jpeg" },
     { "Good Vibes, Good Life", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\Good Vibes, Good Life.jpg" },
@@ -134,7 +134,6 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private void btnCO_Click_1(object sender, EventArgs e)
         {
-
             if (string.IsNullOrWhiteSpace(txtNama.Text))
             {
                 MessageBox.Show("Please fill out your name.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -147,51 +146,57 @@ namespace PAS_Muhammad_Zuhrizal_23
                 return;
             }
 
-            if (cmbBook.SelectedIndex == -1)
+            if (cmbBook.SelectedIndex == -1 || cmbBook.SelectedItem == null)
             {
                 MessageBox.Show("Please select a book.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            string nama = txtNama.Text;
             string selectedBook = cmbBook.SelectedItem.ToString();
             int quantity = (int)nudJumlah.Value;
-            string option = rdBeli.Checked ? "Beli" : "Pinjam";
-            string harga = txtCheckPrice.Text;
+            int price = bookPrices[selectedBook];
+            int totalPrice = price * quantity;
 
-            using (SqlConnection conn = new SqlConnection("Data Source=ASUS;Initial Catalog=PAS_Project;Integrated Security=True;Trust Server Certificate=True"))
-            {
-                conn.Open();
-                if (conn.State == ConnectionState.Open)
+            if (MessageBox.Show($"Are You Sure To Check Out This Item For Rp.{totalPrice}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            { 
+                string nama = txtNama.Text;
+                string option = rdBeli.Checked ? "Beli" : "Pinjam";
+                string harga = $"Rp.{totalPrice}";
+
+                using (SqlConnection conn = new SqlConnection("Data Source=ASUS;Initial Catalog=PAS_Project;Integrated Security=True;Trust Server Certificate=True"))
                 {
-                    string query = "INSERT INTO data_penjualan(nama, buku, jumlah, tipe, harga) VALUES (@nama, @buku, @jumlah, @tipe, @harga)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    conn.Open();
+                    if (conn.State == ConnectionState.Open)
                     {
-                        cmd.Parameters.AddWithValue("@nama", nama);
-                        cmd.Parameters.AddWithValue("@buku", selectedBook);
-                        cmd.Parameters.AddWithValue("@jumlah", quantity);
-                        cmd.Parameters.AddWithValue("@tipe", option);
-                        cmd.Parameters.AddWithValue("@harga", harga);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
+                        string query = "INSERT INTO data_penjualan(nama, buku, jumlah, tipe, harga) VALUES (@nama, @buku, @jumlah, @tipe, @harga)";
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
-                            MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Data could not be saved. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            cmd.Parameters.AddWithValue("@nama", nama);
+                            cmd.Parameters.AddWithValue("@buku", selectedBook);
+                            cmd.Parameters.AddWithValue("@jumlah", quantity);
+                            cmd.Parameters.AddWithValue("@tipe", option);
+                            cmd.Parameters.AddWithValue("@harga", harga);
+
+                            int rowsAffected = cmd.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Check your order in My Order Page.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data could not be saved. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Connection to the database could not be established. Please try again.", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Connection to the database could not be established. Please try again.", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
-
         private void cmbBook_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedBook = cmbBook.SelectedItem.ToString();
@@ -224,10 +229,20 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private void label12_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to go back?", "BACK", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are You Sure You Want To Profile Page?", "PROFILE PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Profile_Page profilePage = new Profile_Page(UserInfo.Username, UserInfo.Password);
                 profilePage.Show();
+                this.Hide();
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are You Sure You Want To Shop Page?", "SHOP PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Buy_Page buy_Page = new Buy_Page();
+                buy_Page.Show();
                 this.Hide();
             }
         }

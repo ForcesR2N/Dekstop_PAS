@@ -15,7 +15,7 @@ namespace PAS_Muhammad_Zuhrizal_23
         private string Username;
         private string Password;
 
-        public Profile_Page(string username, string password) 
+        public Profile_Page(string username, string password)
         {
             InitializeComponent();
             Username = username;
@@ -36,30 +36,42 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            MyOrder_Page myOrder = new MyOrder_Page();
-            myOrder.Show();
-            this.Close();
+            if (MessageBox.Show("Are You Sure Want To My Order Page?", "My Order", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MyOrder_Page myOrder = new MyOrder_Page();
+                myOrder.Show();
+                this.Close();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            MyOrder_Page myOrder = new MyOrder_Page();
-            myOrder.Show();
-            this.Close();
+            if (MessageBox.Show("Are You Sure Want To My Order Page?", "My Order", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MyOrder_Page myOrder = new MyOrder_Page();
+                myOrder.Show();
+                this.Close();
+            }
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-            Buy_Page buyPage = new Buy_Page();
-            buyPage.Show();
-            this.Close();
+            if (MessageBox.Show("Are You Sure You Want To Shop Page?", "SHOP PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Buy_Page buy_Page = new Buy_Page();
+                buy_Page.Show();
+                this.Hide();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Buy_Page buyPage = new Buy_Page();
-            buyPage.Show();
-            this.Close();
+            if (MessageBox.Show("Are You Sure You Want To Shop Page?", "SHOP PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Buy_Page buy_Page = new Buy_Page();
+                buy_Page.Show();
+                this.Hide();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,6 +96,41 @@ namespace PAS_Muhammad_Zuhrizal_23
             Buy_Page buyPage = new Buy_Page();
             buyPage.Show();
             this.Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure Want To My Order Page?", "My Order", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MyOrder_Page myOrder = new MyOrder_Page();
+                myOrder.Show();
+                this.Close();
+            }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure Want To Profile Page?", "Profile", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Profile_Page profilePage = new Profile_Page(UserInfo.Username, UserInfo.Password);
+                profilePage.Show();
+                this.Hide();
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure You Want To Shop Page?", "SHOP PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Buy_Page buy_Page = new Buy_Page();
+                buy_Page.Show();
+                this.Hide();
+            }
         }
     }
 }

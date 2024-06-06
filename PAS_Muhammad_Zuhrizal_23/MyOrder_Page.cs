@@ -375,7 +375,42 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private void printPreviewDialog1_Load(object sender, EventArgs e)
         {
-          
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure Want To My Order Page?", "My Order", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MyOrder_Page myOrder = new MyOrder_Page();
+                myOrder.Show();
+                this.Close();
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure You Want To Profile Page?", "PROFILE PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Profile_Page profilePage = new Profile_Page(UserInfo.Username, UserInfo.Password);
+                profilePage.Show();
+                this.Hide();
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure You Want To Shop Page?", "SHOP PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Buy_Page buy_Page = new Buy_Page();
+                buy_Page.Show();
+                this.Hide();
+            }
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

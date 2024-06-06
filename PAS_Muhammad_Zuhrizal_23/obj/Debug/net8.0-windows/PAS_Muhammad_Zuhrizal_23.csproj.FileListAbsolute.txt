@@ -68,3 +68,4 @@ C:\Users\asusr\source\repos\PAS_Muhammad_Zuhrizal_23\PAS_Muhammad_Zuhrizal_23\ob
 C:\Users\asusr\source\repos\PAS_Muhammad_Zuhrizal_23\PAS_Muhammad_Zuhrizal_23\obj\Debug\net8.0-windows\PAS_Muhammad_Zuhrizal_23.Profile_Page.resources
 C:\Users\asusr\source\repos\PAS_Muhammad_Zuhrizal_23\PAS_Muhammad_Zuhrizal_23\obj\Debug\net8.0-windows\PAS_Muhammad_Zuhrizal_23.Properties.Resources.resources
 C:\Users\asusr\source\repos\PAS_Muhammad_Zuhrizal_23\PAS_Muhammad_Zuhrizal_23\obj\Debug\net8.0-windows\PAS_Muhammad_Zuhrizal_23.sourcelink.json
+C:\Users\asusr\source\repos\PAS_Muhammad_Zuhrizal_23\PAS_Muhammad_Zuhrizal_23\obj\Debug\net8.0-windows\PAS_Muhammad_Zuhrizal_23.SignUp_Page.resources
