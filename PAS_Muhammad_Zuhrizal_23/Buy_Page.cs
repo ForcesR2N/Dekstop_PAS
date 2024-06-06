@@ -25,6 +25,17 @@ namespace PAS_Muhammad_Zuhrizal_23
             { "Learning How To Learn", 100000 }
         };
 
+        private Dictionary<string, string> bookImages = new Dictionary<string, string>
+{
+    { "Atomic Habits", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\atomic_habits." },
+    { "The Psychology Of Money", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\The Psychology Of Money.jpg" },
+    { "Subtle Art Of Not Giving A Fuck", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\Subtle Art Of Not Giving A Fuck.jpeg" },
+    { "Good Vibes, Good Life", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\Good Vibes, Good Life.jpg" },
+    { "How To Respect Myself", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\How To Respect Myself.jpg" },
+    { "Learning How To Learn", @"D:\Mapel\Desktop Dev\PAS_Muhammad_Zuhrizal_23\image\Learning How To Learn.png" }
+};
+
+
         public Buy_Page()
         {
             InitializeComponent();
@@ -124,7 +135,6 @@ namespace PAS_Muhammad_Zuhrizal_23
         private void btnCO_Click_1(object sender, EventArgs e)
         {
 
-
             if (string.IsNullOrWhiteSpace(txtNama.Text))
             {
                 MessageBox.Show("Please fill out your name.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -184,7 +194,12 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private void cmbBook_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string selectedBook = cmbBook.SelectedItem.ToString();
+            if (bookImages.ContainsKey(selectedBook))
+            {
+                string imagePath = bookImages[selectedBook];
+                pictureBox1.Image = Image.FromFile(imagePath);
+            }
         }
 
         private void txtCheckPrice_TextChanged(object sender, EventArgs e)
@@ -195,6 +210,26 @@ namespace PAS_Muhammad_Zuhrizal_23
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are You Sure Want To My Order Page?", "ORDER PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                MyOrder_Page myOrder = new MyOrder_Page();
+                myOrder.Show();
+                this.Close();
+            }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to go back?", "BACK", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Profile_Page profilePage = new Profile_Page(UserInfo.Username, UserInfo.Password);
+                profilePage.Show();
+                this.Hide();
+            }
         }
     }
 }

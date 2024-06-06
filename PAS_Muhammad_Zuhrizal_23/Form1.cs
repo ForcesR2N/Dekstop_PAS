@@ -26,11 +26,11 @@ namespace PAS_Muhammad_Zuhrizal_23
             conn.Open();
             string query = "SELECT COUNT(*) FROM DBO.login WHERE username=@username AND password=@password";
             SqlCommand cmd = new SqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@username",txtUsername.Text);
+            cmd.Parameters.AddWithValue("@username", txtUsername.Text);
             cmd.Parameters.AddWithValue("@password", txtPassword.Text);
             int count = (int)cmd.ExecuteScalar();
             conn.Close();
-            if (count > 0 )
+            if (count > 0)
             {
                 MessageBox.Show("Login Succesfully!", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 UserInfo.Username = txtUsername.Text;
@@ -43,6 +43,31 @@ namespace PAS_Muhammad_Zuhrizal_23
             else
             {
                 MessageBox.Show("Login Failed!", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '*')
+            {
+                txtPassword.PasswordChar = '\0';
+                pictureBox3.Show();
+                pictureBox2.Hide();
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.PasswordChar == '\0')
+            {
+                txtPassword.PasswordChar = '*';
+                pictureBox2.Show();
+                pictureBox3.Hide();
             }
         }
     }

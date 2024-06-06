@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyOrder_Page));
             label1 = new Label();
             btnSearch = new Button();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
-            textBox2 = new TextBox();
+            txtSearch = new TextBox();
             btnPrintPDF = new Button();
             btnDelete = new Button();
             btnUpdate = new Button();
@@ -61,6 +62,8 @@
             label11 = new Label();
             label12 = new Label();
             txtId = new TextBox();
+            printPreviewDialog1 = new PrintPreviewDialog();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -92,10 +95,13 @@
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(175, 267);
+            dataGridView1.Margin = new Padding(5, 4, 5, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(613, 177);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panel2
             // 
@@ -106,12 +112,12 @@
             panel2.Size = new Size(803, 57);
             panel2.TabIndex = 24;
             // 
-            // textBox2
+            // txtSearch
             // 
-            textBox2.Location = new Point(175, 236);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(332, 27);
-            textBox2.TabIndex = 25;
+            txtSearch.Location = new Point(175, 236);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(332, 27);
+            txtSearch.TabIndex = 25;
             // 
             // btnPrintPDF
             // 
@@ -123,6 +129,7 @@
             btnPrintPDF.TabIndex = 30;
             btnPrintPDF.Text = "Print PDF";
             btnPrintPDF.UseVisualStyleBackColor = true;
+            btnPrintPDF.Click += btnPrintPDF_Click;
             // 
             // btnDelete
             // 
@@ -382,6 +389,22 @@
             txtId.Size = new Size(251, 27);
             txtId.TabIndex = 49;
             // 
+            // printPreviewDialog1
+            // 
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
+            printPreviewDialog1.Load += printPreviewDialog1_Load;
+            printPreviewDialog1.Click += printPreviewDialog1_Load;
+            // 
+            // printDocument1
+            // 
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
             // MyOrder_Page
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -412,7 +435,7 @@
             Controls.Add(btnUpdate);
             Controls.Add(btnRead);
             Controls.Add(btnCreate);
-            Controls.Add(textBox2);
+            Controls.Add(txtSearch);
             Controls.Add(panel2);
             Controls.Add(txtNama);
             Controls.Add(dataGridView1);
@@ -436,7 +459,7 @@
         private Button btnSearch;
         private DataGridView dataGridView1;
         private Panel panel2;
-        private TextBox textBox2;
+        private TextBox txtSearch;
         private Button btnPrintPDF;
         private Button btnDelete;
         private Button btnUpdate;
@@ -465,5 +488,7 @@
         private Label label11;
         private Label label12;
         private TextBox txtId;
+        private PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
