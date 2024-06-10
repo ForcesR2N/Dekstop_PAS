@@ -71,6 +71,7 @@
             // 
             // btnSearch
             // 
+            btnSearch.Cursor = Cursors.Hand;
             btnSearch.Location = new Point(576, 103);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(94, 29);
@@ -95,6 +96,7 @@
             // 
             // txtSearch
             // 
+            txtSearch.BorderStyle = BorderStyle.FixedSingle;
             txtSearch.Location = new Point(238, 103);
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(332, 27);
@@ -103,6 +105,7 @@
             // btnPrintPDF
             // 
             btnPrintPDF.Cursor = Cursors.Hand;
+            btnPrintPDF.Font = new Font("Segoe UI", 9F);
             btnPrintPDF.Location = new Point(325, 415);
             btnPrintPDF.Margin = new Padding(5, 4, 5, 4);
             btnPrintPDF.Name = "btnPrintPDF";
@@ -115,6 +118,7 @@
             // btnDelete
             // 
             btnDelete.Cursor = Cursors.Hand;
+            btnDelete.Font = new Font("Segoe UI", 9F);
             btnDelete.Location = new Point(248, 415);
             btnDelete.Margin = new Padding(5, 4, 5, 4);
             btnDelete.Name = "btnDelete";
@@ -127,6 +131,7 @@
             // btnUpdate
             // 
             btnUpdate.Cursor = Cursors.Hand;
+            btnUpdate.Font = new Font("Segoe UI", 9F);
             btnUpdate.Location = new Point(171, 415);
             btnUpdate.Margin = new Padding(5, 4, 5, 4);
             btnUpdate.Name = "btnUpdate";
@@ -139,6 +144,7 @@
             // btnRead
             // 
             btnRead.Cursor = Cursors.Hand;
+            btnRead.Font = new Font("Segoe UI", 9F);
             btnRead.Location = new Point(94, 415);
             btnRead.Margin = new Padding(5, 4, 5, 4);
             btnRead.Name = "btnRead";
@@ -151,6 +157,7 @@
             // btnCreate
             // 
             btnCreate.Cursor = Cursors.Hand;
+            btnCreate.Font = new Font("Segoe UI", 9F);
             btnCreate.Location = new Point(15, 415);
             btnCreate.Margin = new Padding(5, 4, 5, 4);
             btnCreate.Name = "btnCreate";
@@ -163,6 +170,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F);
             label2.Location = new Point(20, 529);
             label2.Name = "label2";
             label2.Size = new Size(49, 20);
@@ -172,6 +180,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F);
             label3.Location = new Point(20, 566);
             label3.Name = "label3";
             label3.Size = new Size(41, 20);
@@ -181,6 +190,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F);
             label4.Location = new Point(16, 600);
             label4.Name = "label4";
             label4.Size = new Size(55, 20);
@@ -190,6 +200,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F);
             label5.Location = new Point(76, 530);
             label5.Name = "label5";
             label5.Size = new Size(12, 20);
@@ -199,6 +210,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F);
             label6.Location = new Point(76, 598);
             label6.Name = "label6";
             label6.Size = new Size(12, 20);
@@ -208,6 +220,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F);
             label7.Location = new Point(76, 564);
             label7.Name = "label7";
             label7.Size = new Size(12, 20);
@@ -216,6 +229,7 @@
             // 
             // txtNama
             // 
+            txtNama.Font = new Font("Segoe UI", 9F);
             txtNama.Location = new Point(94, 530);
             txtNama.Name = "txtNama";
             txtNama.Size = new Size(251, 27);
@@ -223,6 +237,8 @@
             // 
             // cmbBook
             // 
+            cmbBook.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbBook.Font = new Font("Segoe UI", 9F);
             cmbBook.FormattingEnabled = true;
             cmbBook.Items.AddRange(new object[] { "Atomic Habits", "The Psychology Of Money", "Subtle Art Of Not Giving A Fuck", "Good Vibes, Good Life", "How To Respect Myself", "Learning How To Learn" });
             cmbBook.Location = new Point(94, 563);
@@ -233,25 +249,32 @@
             // nudQuantity
             // 
             nudQuantity.BackColor = Color.White;
+            nudQuantity.Font = new Font("Segoe UI", 9F);
             nudQuantity.Location = new Point(94, 597);
             nudQuantity.Name = "nudQuantity";
+            nudQuantity.ReadOnly = true;
             nudQuantity.Size = new Size(64, 27);
             nudQuantity.TabIndex = 40;
             nudQuantity.TextAlign = HorizontalAlignment.Center;
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(555, 606);
+            btnClear.BackColor = Color.FromArgb(255, 128, 128);
+            btnClear.Cursor = Cursors.Hand;
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Font = new Font("Segoe UI", 9F);
+            btnClear.Location = new Point(555, 637);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 29);
             btnClear.TabIndex = 41;
             btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
+            btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
             // 
             // rdBeli
             // 
             rdBeli.AutoSize = true;
+            rdBeli.Font = new Font("Segoe UI", 9F);
             rdBeli.Location = new Point(521, 528);
             rdBeli.Name = "rdBeli";
             rdBeli.Size = new Size(58, 24);
@@ -263,6 +286,7 @@
             // rdPinjam
             // 
             rdPinjam.AutoSize = true;
+            rdPinjam.Font = new Font("Segoe UI", 9F);
             rdPinjam.Location = new Point(521, 498);
             rdPinjam.Name = "rdPinjam";
             rdPinjam.Size = new Size(81, 24);
@@ -274,6 +298,7 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F);
             label8.Location = new Point(488, 498);
             label8.Name = "label8";
             label8.Size = new Size(12, 20);
@@ -283,6 +308,7 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9F);
             label9.Location = new Point(417, 498);
             label9.Name = "label9";
             label9.Size = new Size(37, 20);
@@ -292,6 +318,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F);
             label10.Location = new Point(489, 565);
             label10.Name = "label10";
             label10.Size = new Size(12, 20);
@@ -300,24 +327,32 @@
             // 
             // btnCekPrice
             // 
-            btnCekPrice.Location = new Point(381, 560);
+            btnCekPrice.BackColor = Color.Cyan;
+            btnCekPrice.Cursor = Cursors.Hand;
+            btnCekPrice.FlatStyle = FlatStyle.Flat;
+            btnCekPrice.Font = new Font("Segoe UI", 9F);
+            btnCekPrice.Location = new Point(382, 559);
             btnCekPrice.Name = "btnCekPrice";
             btnCekPrice.Size = new Size(101, 29);
             btnCekPrice.TabIndex = 47;
             btnCekPrice.Text = "Check Price";
-            btnCekPrice.UseVisualStyleBackColor = true;
+            btnCekPrice.UseVisualStyleBackColor = false;
             btnCekPrice.Click += btnCekPrice_Click;
             // 
             // txtCheckPrice
             // 
+            txtCheckPrice.BorderStyle = BorderStyle.FixedSingle;
+            txtCheckPrice.Font = new Font("Segoe UI", 9F);
             txtCheckPrice.Location = new Point(524, 560);
             txtCheckPrice.Name = "txtCheckPrice";
+            txtCheckPrice.ReadOnly = true;
             txtCheckPrice.Size = new Size(125, 27);
             txtCheckPrice.TabIndex = 46;
             // 
             // label11
             // 
             label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9F);
             label11.Location = new Point(76, 497);
             label11.Name = "label11";
             label11.Size = new Size(12, 20);
@@ -327,7 +362,8 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(23, 485);
+            label12.Font = new Font("Segoe UI", 9F);
+            label12.Location = new Point(23, 499);
             label12.Name = "label12";
             label12.Size = new Size(22, 20);
             label12.TabIndex = 50;
@@ -335,8 +371,11 @@
             // 
             // txtId
             // 
+            txtId.BorderStyle = BorderStyle.FixedSingle;
+            txtId.Font = new Font("Segoe UI", 9F);
             txtId.Location = new Point(94, 497);
             txtId.Name = "txtId";
+            txtId.ReadOnly = true;
             txtId.Size = new Size(251, 27);
             txtId.TabIndex = 49;
             // 

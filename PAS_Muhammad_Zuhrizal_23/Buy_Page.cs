@@ -158,7 +158,7 @@ namespace PAS_Muhammad_Zuhrizal_23
             int totalPrice = price * quantity;
 
             if (MessageBox.Show($"Are You Sure To Check Out This Item For Rp.{totalPrice}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            { 
+            {
                 string nama = txtNama.Text;
                 string option = rdBeli.Checked ? "Beli" : "Pinjam";
                 string harga = $"Rp.{totalPrice}";
@@ -182,7 +182,12 @@ namespace PAS_Muhammad_Zuhrizal_23
                             if (rowsAffected > 0)
                             {
                                 MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                MessageBox.Show("Check your order in My Order Page.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (MessageBox.Show("Check your order in My Order Page.", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                {
+                                    MyOrder_Page myOrder = new MyOrder_Page();
+                                    myOrder.Show();
+                                    this.Close();
+                                }
                             }
                             else
                             {
@@ -199,11 +204,14 @@ namespace PAS_Muhammad_Zuhrizal_23
         }
         private void cmbBook_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedBook = cmbBook.SelectedItem.ToString();
-            if (bookImages.ContainsKey(selectedBook))
+            if (cmbBook.SelectedItem != null)
             {
-                string imagePath = bookImages[selectedBook];
-                pictureBox1.Image = Image.FromFile(imagePath);
+                string selectedBook = cmbBook.SelectedItem.ToString();
+                if (bookImages.ContainsKey(selectedBook))
+                {
+                    string imagePath = bookImages[selectedBook];
+                    pictureBox1.Image = Image.FromFile(imagePath);
+                }
             }
         }
 
@@ -239,12 +247,22 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private void label13_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are You Sure You Want To Shop Page?", "SHOP PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are You Sure You Want To Shop Page?", "SHOP PAGE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Buy_Page buy_Page = new Buy_Page();
                 buy_Page.Show();
                 this.Hide();
             }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtNama.Clear();
+            cmbBook.SelectedIndex = -1;
+            nudJumlah.Value = 0;
+            rdBeli.Checked = false;
+            rdPinjam.Checked = false;
+            txtCheckPrice.Clear();
         }
     }
 }

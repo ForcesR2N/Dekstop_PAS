@@ -94,6 +94,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.ControlLightLight;
             label3.Font = new Font("Verdana", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(66, 45);
             label3.Name = "label3";
@@ -129,6 +130,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = SystemColors.ControlLightLight;
             label4.Font = new Font("Verdana", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(66, 98);
             label4.Name = "label4";

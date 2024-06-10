@@ -410,7 +410,31 @@ namespace PAS_Muhammad_Zuhrizal_23
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
+            using (SqlConnection conn = new SqlConnection("Data Source=ASUS;Initial Catalog=PAS_Project;Integrated Security=True;Trust Server Certificate=True"))
+            {
+                conn.Open();
 
+                SqlCommand cmd;
+                if (string.IsNullOrWhiteSpace(txtSearch.Text))
+                {
+                    cmd = new SqlCommand("SELECT * FROM data_penjualan", conn);
+                }
+                else
+                {
+                    cmd = new SqlCommand("SELECT * FROM data_penjualan WHERE nama LIKE @nama + '%'", conn);
+                    cmd.Parameters.AddWithValue("@nama", txtSearch.Text);
+                }
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No records found.", "Search", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

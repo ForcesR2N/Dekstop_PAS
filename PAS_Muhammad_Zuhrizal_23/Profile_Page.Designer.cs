@@ -53,7 +53,7 @@
             // 
             btnBuy.BackgroundImage = (Image)resources.GetObject("btnBuy.BackgroundImage");
             btnBuy.BackgroundImageLayout = ImageLayout.Zoom;
-            btnBuy.Location = new Point(446, 519);
+            btnBuy.Location = new Point(449, 519);
             btnBuy.Margin = new Padding(5, 4, 5, 4);
             btnBuy.Name = "btnBuy";
             btnBuy.Size = new Size(53, 42);
@@ -64,10 +64,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.COMMS_RIZALP1_BGWHITE;
-            pictureBox1.Location = new Point(252, 174);
+            pictureBox1.Location = new Point(244, 158);
             pictureBox1.Margin = new Padding(5, 4, 5, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(155, 137);
+            pictureBox1.Size = new Size(204, 192);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -76,7 +76,7 @@
             // 
             btnOrder.BackgroundImage = (Image)resources.GetObject("btnOrder.BackgroundImage");
             btnOrder.BackgroundImageLayout = ImageLayout.Zoom;
-            btnOrder.Location = new Point(443, 458);
+            btnOrder.Location = new Point(449, 458);
             btnOrder.Margin = new Padding(5, 4, 5, 4);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(53, 43);
@@ -88,7 +88,7 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Location = new Point(181, 456);
+            label3.Location = new Point(190, 456);
             label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
             label3.Padding = new Padding(12);
@@ -101,7 +101,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(181, 516);
+            label4.Location = new Point(188, 516);
             label4.Margin = new Padding(5, 0, 5, 0);
             label4.Name = "label4";
             label4.Padding = new Padding(12);
@@ -114,7 +114,7 @@
             // label_username
             // 
             label_username.AutoSize = true;
-            label_username.Location = new Point(280, 341);
+            label_username.Location = new Point(305, 354);
             label_username.Name = "label_username";
             label_username.Size = new Size(185, 25);
             label_username.TabIndex = 7;
@@ -124,7 +124,7 @@
             // label_password
             // 
             label_password.AutoSize = true;
-            label_password.Location = new Point(280, 315);
+            label_password.Location = new Point(305, 379);
             label_password.Name = "label_password";
             label_password.Size = new Size(184, 25);
             label_password.TabIndex = 8;
@@ -135,7 +135,7 @@
             button1.BackColor = Color.FromArgb(255, 128, 128);
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(181, 573);
+            button1.Location = new Point(188, 573);
             button1.Name = "button1";
             button1.Size = new Size(321, 34);
             button1.TabIndex = 9;

@@ -54,6 +54,7 @@
             rdPinjam = new RadioButton();
             label7 = new Label();
             label4 = new Label();
+            btnClear = new Button();
             ((System.ComponentModel.ISupportInitialize)nudJumlah).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -123,6 +124,7 @@
             // 
             // cmbBook
             // 
+            cmbBook.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBook.FormattingEnabled = true;
             cmbBook.Items.AddRange(new object[] { "Atomic Habits", "The Psychology Of Money", "Subtle Art Of Not Giving A Fuck", "Good Vibes, Good Life", "How To Respect Myself", "Learning How To Learn" });
             cmbBook.Location = new Point(216, 394);
@@ -148,6 +150,7 @@
             nudJumlah.BackColor = Color.White;
             nudJumlah.Location = new Point(216, 449);
             nudJumlah.Name = "nudJumlah";
+            nudJumlah.ReadOnly = true;
             nudJumlah.Size = new Size(64, 27);
             nudJumlah.TabIndex = 13;
             nudJumlah.TextAlign = HorizontalAlignment.Center;
@@ -156,7 +159,7 @@
             // 
             btnCO.BackColor = Color.Cyan;
             btnCO.FlatStyle = FlatStyle.Flat;
-            btnCO.Location = new Point(297, 667);
+            btnCO.Location = new Point(357, 667);
             btnCO.Name = "btnCO";
             btnCO.Size = new Size(121, 44);
             btnCO.TabIndex = 14;
@@ -178,6 +181,7 @@
             // 
             txtCheckPrice.Location = new Point(219, 573);
             txtCheckPrice.Name = "txtCheckPrice";
+            txtCheckPrice.ReadOnly = true;
             txtCheckPrice.Size = new Size(125, 27);
             txtCheckPrice.TabIndex = 17;
             txtCheckPrice.TextChanged += txtCheckPrice_TextChanged;
@@ -194,6 +198,7 @@
             // btnCekPrice
             // 
             btnCekPrice.BackColor = Color.RoyalBlue;
+            btnCekPrice.Cursor = Cursors.Hand;
             btnCekPrice.FlatStyle = FlatStyle.Flat;
             btnCekPrice.Location = new Point(112, 573);
             btnCekPrice.Name = "btnCekPrice";
@@ -302,12 +307,27 @@
             label4.TabIndex = 24;
             label4.Text = "TIPE";
             // 
+            // btnClear
+            // 
+            btnClear.BackColor = Color.FromArgb(255, 128, 128);
+            btnClear.Cursor = Cursors.Hand;
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Font = new Font("Segoe UI", 9F);
+            btnClear.Location = new Point(221, 667);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(121, 44);
+            btnClear.TabIndex = 42;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = false;
+            btnClear.Click += btnClear_Click;
+            // 
             // Buy_Page
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(124, 207, 244);
             ClientSize = new Size(682, 753);
+            Controls.Add(btnClear);
             Controls.Add(rdBeli);
             Controls.Add(rdPinjam);
             Controls.Add(label7);
@@ -367,5 +387,6 @@
         private Label label12;
         private Label label11;
         private Label label13;
+        private Button btnClear;
     }
 }
